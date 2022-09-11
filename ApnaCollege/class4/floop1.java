@@ -1,4 +1,4 @@
-package com.class4;
+package ApnaCollege.class4;
 // import java.util.Scanner;
 public class floop1 {
     public static void main(String[] args) {

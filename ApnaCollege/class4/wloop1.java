@@ -1,4 +1,4 @@
-package com.class4;
+package ApnaCollege.class4;
 
 public class wloop1 {
     public static void main(String[] args) {

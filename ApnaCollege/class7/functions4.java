@@ -1,4 +1,4 @@
-package com.class7;
+package ApnaCollege.class7;
 import java.util.*;
 // factorial of a number
 

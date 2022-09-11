@@ -1,4 +1,4 @@
-package com.class5;
+package ApnaCollege.class5;
 import java.util.Scanner;
 
 public class hollowrect {

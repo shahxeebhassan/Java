@@ -1,4 +1,4 @@
-package com.class3;
+package ApnaCollege.class3;
 import java.util.Scanner;
 
 

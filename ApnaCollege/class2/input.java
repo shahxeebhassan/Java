@@ -1,4 +1,4 @@
-package com.class2;
+package ApnaCollege.class2;
 //Firstly import this
 import java.util.Scanner;
 public class input {

@@ -1,4 +1,4 @@
-package com.class2;
+package ApnaCollege.class2;
 
 public class variables {
     public static void main(String[] args) {

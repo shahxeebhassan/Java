@@ -1,4 +1,4 @@
-package com.class2;
+package ApnaCollege.class2;
 
 class output {
     public static void main(String[] args) {

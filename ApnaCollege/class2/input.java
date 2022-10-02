@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+package ApnaCollege.class2;
+>>>>>>> 9da6346901758d7f3dfcfa013949e6212403c4c6
 //Firstly import this
 import java.util.Scanner;
 public class input {

@@ -1,4 +1,4 @@
-package com.class7;
+package class7;
 import java.util.Scanner;
 
 public class functions1 {

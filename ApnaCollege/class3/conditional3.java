@@ -1,4 +1,4 @@
-package com.class3;
+package class3;
 import java.util.Scanner;
 
 public class conditional3{

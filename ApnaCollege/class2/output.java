@@ -1,5 +1,3 @@
-package com.class2;
-
 class output {
     public static void main(String[] args) {
         //Output in java

@@ -1,4 +1,4 @@
-package com.class4;
+package class4;
 import java.util.Scanner;
 
 public class floop3 {

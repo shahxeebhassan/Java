@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HomePage",
+            "request": "launch",
+            "mainClass": "HomePage",
+            "projectName": "SRMS_41df0dc5"
+        },
+        {
+            "type": "java",
+            "name": "Launch main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": "SRMS_41df0dc5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Delete",
+            "request": "launch",
+            "mainClass": "Delete",
+            "projectName": "SRMS_41df0dc5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Admin",
+            "request": "launch",
+            "mainClass": "Admin",
+            "projectName": "SRMS_41df0dc5"
+        },
+        {
+            "type": "java",
+            "name": "Launch AddStudent",
+            "request": "launch",
+            "mainClass": "AddStudent",
+            "projectName": "SRMS_41df0dc5"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "SRMS_41df0dc5"
+        },
+        {
+            "type": "java",
             "name": "Launch Student",
             "request": "launch",
             "mainClass": "Student",

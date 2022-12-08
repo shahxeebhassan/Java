@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import com.mysql.cj.xdevapi.UpdateResult;
-
 import java.sql.*;
 
 public class Admin {
@@ -12,10 +10,10 @@ public class Admin {
     String db_Password = "Affi@786";
 
     public Admin() {
-        byte choice1; 
-        while (true) {
+        byte choice1;
+        label: while (true) {
             System.out.println(
-                    "\n\n\n\n*****   Welcome Admin   *****\n\n\nAdmin Panel\n\n1. Add Student\n2. Add Result\n3. Update Result\n4. Delete Record\n5. Exit\n6. Go to HomePage\n\nEnter your choice : ");
+                    "\n\n*****   Welcome Admin   *****\n\n\nAdmin Panel\n\n1. Add Student\n2. Add Result\n3. Update Student\n4. Update Result\n5. Delete Record\n6. Go to HomePage\n7. Exit\n\nEnter your choice : ");
             Scanner sc = new Scanner(System.in);
             choice = sc.nextByte();
             if (choice == 1) {
@@ -25,15 +23,18 @@ public class Admin {
                 new AddResult();
                 break;
             } else if (choice == 3) {
-                UpdateRes u = new UpdateRes();
+                new UpdateStudent();
                 break;
             } else if (choice == 4) {
-                new Delete();
+                new UpdateRes();
                 break;
             } else if (choice == 5) {
-                System.exit(0);
+                new Delete();
+                break;
             } else if (choice == 6) {
                 HomePage home = new HomePage();
+            } else if (choice == 7) {
+                System.exit(0);
             } else {
                 System.out.println("Invalid Selection");
                 break;
@@ -42,15 +43,19 @@ public class Admin {
             choice1 = sc.nextByte();
             if (choice == 3) {
                 System.exit(0);
-            } else if (choice == 1) {
-                Aa: while (choice == 1) {
+            } else if (choice1== 1) {
+                Aa:
+                while (choice1 == 1) {
                     Admin admin = new Admin();
                 }
-        }
-    }
-}
+            } else if (choice1 == 2) {
+                continue label;
+            } else {
+                System.out.println("\nInvalid Selection");
+                break;
+            }
 
-    // public static void main(String[] args) {
-    //     Admin r = new Admin();
-    // }
+        }
+
+    }
 }

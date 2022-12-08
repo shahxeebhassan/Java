@@ -14,39 +14,36 @@ public class AddStudent {
     String fatherName;
 
     public AddStudent() {
-        // System.out.println("Add Student");
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Program : ");
         program = sc.nextLine();
-        // this.program = program;
         System.out.println("Enter Semester : ");
-        semester = sc.nextLine();
-        // this.semester = semester;
+        semester = sc.next();
+        sc.nextLine();
         System.out.println("Enter Roll Number : ");
         RollNumber = sc.nextLine();
-        // this.RollNumber = RollNumber;
         System.out.println("Enter Name : ");
         name = sc.nextLine();
-        // this.name = name;
         System.out.println("Enter Father Name : ");
         fatherName = sc.nextLine();
         System.out.println("Enter your gender: ");
-        gender = sc.nextLine();
-        // this.fatherName = fatherName;
+        gender = sc.next();
         try {
             // Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(db_Url, db_User, db_Password);
             System.out.println("Connected Database");
             Statement st = con.createStatement();
-            st.executeUpdate("insert into student(program,branch,rollNo,name,gender,fatherName) values('" + program
-                    + "','" + semester + "','" + RollNumber + "','" + name + "','" + gender + "','" + fatherName
+            st.executeUpdate("insert into student(rollNo,program,semester,name,gender,fatherName) values('" + RollNumber
+                    + "','" + program + "','" + program + "','" + semester + "','" + gender + "','" + fatherName
                     + "')");
             System.out.println("Student Added Successfully");
         } catch (Exception e) {
             e.printStackTrace();
+            // System.out.println("Roll Number already exists");
+            Admin admin = new Admin();
         }
     }
-    // public static void main(String[] args) {
-    //     AddStudent addStudent = new AddStudent();
-    // }
+    public static void main(String[] args) {
+        AddStudent addStudent = new AddStudent();
+    }
 }

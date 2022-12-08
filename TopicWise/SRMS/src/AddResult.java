@@ -7,7 +7,7 @@ public class AddResult {
     String db_User = "root";
     String db_Password = "Affi@786";
     // Add Result
-    String RollNumber;
+    int RollNumber;
     String subject1;
     String subject2;
     String subject3;
@@ -18,21 +18,21 @@ public class AddResult {
     public AddResult() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Roll Number : ");
-        RollNumber = sc.nextLine();
+        RollNumber = sc.nextInt();
         // this.RollNumber = RollNumber;
         // Scanner sc = new Scanner(System.in);
         System.out.println("Enter Marks in Programming Fundamentals: ");
-        subject1 = sc.nextLine();
+        subject1 = sc.next();
         System.out.println("Enter Marks in ICT: ");
-        subject2 = sc.nextLine();
+        subject2 = sc.next();
         System.out.println("Enter Marks in Physics: ");
-        subject3 = sc.nextLine();
+        subject3 = sc.next();
         System.out.println("Enter Marks in Islamiyat: ");
-        subject4 = sc.nextLine();
+        subject4 = sc.next();
         System.out.println("Enter Marks in Calculus: ");
-        subject5 = sc.nextLine();
+        subject5 = sc.next();
         System.out.println("Enter Marks in English: ");
-        subject6 = sc.nextLine();
+        subject6 = sc.next();
         try {
             // Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(db_Url, db_User, db_Password);

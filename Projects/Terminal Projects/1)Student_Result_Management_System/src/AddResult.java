@@ -2,56 +2,58 @@ import java.util.Scanner;
 import java.sql.*;
 
 public class AddResult {
+    Scanner sc = new Scanner(System.in);
     // Database Connection
     String db_Url = "jdbc:mysql://localhost:3306/srm";
     String db_User = "root";
     String db_Password = "Affi@786";
-    // Add Result
+    // Result Details
     int RollNumber;
-    String subject1;
-    String subject2;
-    String subject3;
-    String subject4;
-    String subject5;
-    String subject6;
-
+    int subject1;
+    int subject2;
+    int subject3;
+    int subject4;
+    int subject5;
+    int subject6;
+    //Default Constructor that will be called when object is created
     public AddResult() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Roll Number : ");
+        System.out.print("\nEnter Roll Number : ");
         RollNumber = sc.nextInt();
-        // this.RollNumber = RollNumber;
-        // Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Marks in Programming Fundamentals: ");
-        subject1 = sc.next();
-        System.out.println("Enter Marks in ICT: ");
-        subject2 = sc.next();
-        System.out.println("Enter Marks in Physics: ");
-        subject3 = sc.next();
-        System.out.println("Enter Marks in Islamiyat: ");
-        subject4 = sc.next();
-        System.out.println("Enter Marks in Calculus: ");
-        subject5 = sc.next();
-        System.out.println("Enter Marks in English: ");
-        subject6 = sc.next();
+        System.out.print("\nEnter Marks in Programming Fundamentals: ");
+        subject1 = sc.nextInt();
+        System.out.print("\nEnter Marks in ICT: ");
+        subject2 = sc.nextInt();
+        System.out.print("\nEnter Marks in Physics: ");
+        subject3 = sc.nextInt();
+        System.out.print("\nEnter Marks in Islamiyat: ");
+        subject4 = sc.nextInt();
+        System.out.print("\nEnter Marks in Calculus: ");
+        subject5 = sc.nextInt();
+        System.out.print("\nEnter Marks in English: ");
+        subject6 = sc.nextInt();
+        // Inserting Result in Database using JDBC
         try {
-            // Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(db_Url, db_User, db_Password);
             Statement st = con.createStatement();
-            System.out.println("Connected Database");
+            System.out.println("\nConnected Database");
             ResultSet rs = st.executeQuery("select * from student where rollNo ='" + RollNumber + "'");
+            // Checking if Roll Number exists in database
             if (rs.next()) {
-                st.executeUpdate("insert into result(rollNo,pf,ict,phy,isl,calculus,eng)values('" + RollNumber + "','"
-                        + subject1 + "','" + subject2 + "','" + subject3 + "','" + subject4 + "','" + subject5 + "','"
-                        + subject6 + "')");
-                System.out.println("Result Added Successfully");
-            } else {
-                System.out.print("Roll Number doesn't exist in our database");
-                // setVisible(false);
+                st.executeUpdate("insert into result(rollNo,pf,ict,phy,isl,calculus,eng)values('" + RollNumber + "','"+ subject1 + "','" + subject2 + "','" + subject3 + "','" + subject4 + "','" + subject5 + "','"+ subject6 + "')");
+                System.out.println("\nResult Added Successfully");
+            }// If Roll Number doesn't exist in database
+            else {
+                System.out.print("\nRoll Number doesn't exist in our database");
             }
-        } catch (Exception e) {
+        }// If Connection is not established
+         catch (Exception e) {
             e.printStackTrace();
-            System.out.print("Connection error");
+            System.out.print("\nConnection error");
         }
-        // }
+        // Calling Admin Class to go back to Admin Panel after adding result
+        new Admin();
     }
+    // public static void main(String[] args) {
+    //     new AddResult();
+    // }
 }

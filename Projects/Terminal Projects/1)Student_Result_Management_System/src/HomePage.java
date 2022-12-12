@@ -3,48 +3,37 @@ import java.util.Scanner;
 
 public class HomePage {
     // selection
-    byte choice;
-    byte choice1;
+    char choice;
+    char choice1;
     // login
     String username = "";
     String password = "";
 
     public HomePage() {
         Scanner sc = new Scanner(System.in);
-        System.out.println(
+        // HOME: while (true) {
+            System.out.print(
                 "\n\n\n\n*****   Welcome to the Student Result Management System ---(Developed by Clever Clowns)---  *****\n\n\nWho are You ?\n\n1. Admin\n2. User or Student\n3. Exit Program\n\nEnter your choice : ");
-        HOME: while (true) {
-            try {
-                choice = sc.nextByte();
-            } catch (InputMismatchException e) {
-                System.out.println("Enter an Integer Value");
-                sc.next();
-                continue HOME;
-            }
-
-            if (choice == 3) {
+                choice = sc.next().charAt(0);
+ 
+            if (choice == '3') {
                 System.exit(0);
-            } else if (choice == 1) {
+            } else if (choice == '1') {
                 Admin admin = new Admin();
-            } else if (choice == 2) {
+            } else if (choice == '2') {
                 Student student = new Student();
             } else {
                 System.out.println("\nInvalid Selection");
-                continue HOME;
+                // continue HOME;
+                HomePage homePage = new HomePage();
             }
             // break;
             choice:while (true) {
-                System.out.println(
-                        "\n\n\nEnter Your Selection:\n1. Go Home\n2. Go to Admin Panel \n3. Exit Program");
-                try {
-                    choice1 = sc.nextByte();
-                } catch (InputMismatchException e) {
-                    System.out.println("\nEnter an Integer Value");
-                    sc.next();
-                    continue choice;
-                }
+                System.out.println("\n\n\nEnter Your Selection:\n1. Go Home\n2. Go to Admin Panel \n3. Exit Program");
+                    choice1 = sc.next().charAt(0);
                 if (choice1 == 1) {
-                    continue HOME;
+                    // continue HOME;
+                    HomePage homePage = new HomePage();
                 } else if (choice1 == 2) {
                     Admin admin = new Admin();
 
@@ -57,7 +46,7 @@ public class HomePage {
                 }
             }
         }
-    }
+    // }
 
     public static void main(String[] args) {
         HomePage homePage = new HomePage();

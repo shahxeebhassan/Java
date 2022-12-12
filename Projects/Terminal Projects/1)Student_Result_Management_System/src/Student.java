@@ -3,24 +3,32 @@ import java.sql.*;
 
 public class Student {
     Scanner sc = new Scanner(System.in);
-    char choice;
+    private char choice;
     // Database Connection
-    String db_Url = "jdbc:mysql://localhost:3306/srm";
-    String db_User = "root";
-    String db_Password = "Affi@786";
+    private String db_Url = "jdbc:mysql://localhost:3306/srm";
+    private String db_User = "root";
+    private String db_Password = "Affi@786";
     // Student Details
-    String rollNumber;
-    String program;
-    String semester;
-    String name;
-    String gender;
-    String fatherName;
-    // Result Details
-    // String pass;
-    int total;
+    private String rollNumber;
+    private int total;
+
     public Student() {
         System.out.print("\n\n\n\n*****   Welcome Student   *****\n\n\nEnter your Roll Number to see your Result :");
-            Search();
+        Search();
+        while (true) {
+            System.out.println("\n\n\nEnter Your Selection:\n1. Search Again\n2. Go Home \n3. Exit Program");
+            choice = sc.next().charAt(0);
+            if (choice == '1') {
+                Student student = new Student();
+            } else if (choice == '2') {
+                HomePage homePage = new HomePage();
+            } else if (choice == '3') {
+                System.exit(0);
+            } else {
+                System.out.println("\nInvalid Selection");
+                Student student = new Student();
+            }
+        }
     }
 
     private void Search() {
@@ -45,13 +53,14 @@ public class Student {
                 System.out.print("\n\nCalculus    : " + rs.getInt(12));
                 System.out.print("\t\t\t\tEnglish          : " + rs.getInt(13));
                 total = rs.getInt(8) + rs.getInt(9) + rs.getInt(10) + rs.getInt(11) + rs.getInt(12) + rs.getInt(13);
-                if (rs.getInt(8) < 60 || rs.getInt(9) < 60 || rs.getInt(10) < 60 || rs.getInt(11) < 60 || rs.getInt(12) < 60|| rs.getInt(13) < 60) {
+                if (rs.getInt(8) < 60 || rs.getInt(9) < 60 || rs.getInt(10) < 60 || rs.getInt(11) < 60
+                        || rs.getInt(12) < 60 || rs.getInt(13) < 60) {
                     System.out.println("\n\nTotal       : " + total + "\t\t\t\tResult           : Fail");
                 } else {
                     System.out.println("\n\nTotal       : " + total + "\t\t\t\tResult           : Pass");
                 }
-            }else{
-                System.out.println("Roll Number Not Found");
+            } else {
+                System.out.println("\nRoll Number Not Found");
             }
         } catch (Exception e) {
             // JOptionPane.showMessageDialog(null, "Connection Failed");
@@ -59,6 +68,7 @@ public class Student {
             System.out.println("Connection Failed");
         }
     }
+
     public static void main(String[] args) {
         Student s = new Student();
     }

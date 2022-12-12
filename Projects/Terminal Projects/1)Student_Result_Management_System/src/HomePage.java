@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class HomePage {
     // selection
-    char choice;
-    char choice1;
+    private char choice;
+    private char choice1;
     // login
-    String username = "";
-    String password = "";
+    private String username = "";
+    private String password = "";
 
     public HomePage() {
         Scanner sc = new Scanner(System.in);

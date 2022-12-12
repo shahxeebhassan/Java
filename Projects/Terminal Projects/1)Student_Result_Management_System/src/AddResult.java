@@ -4,19 +4,27 @@ import java.sql.*;
 public class AddResult {
     Scanner sc = new Scanner(System.in);
     // Database Connection
-    String db_Url = "jdbc:mysql://localhost:3306/srm";
-    String db_User = "root";
-    String db_Password = "Affi@786";
+    private String db_Url = "jdbc:mysql://localhost:3306/srm";
+    private String db_User = "root";
+    private String db_Password = "Affi@786";
     // Result Details
-    int RollNumber;
-    int subject1;
-    int subject2;
-    int subject3;
-    int subject4;
-    int subject5;
-    int subject6;
+    private int RollNumber;
+    private int subject1;
+    private int subject2;
+    private int subject3;
+    private int subject4;
+    private int subject5;
+    private int subject6;
     //Default Constructor that will be called when object is created
     public AddResult() {
+        AddResult();
+        // Calling Admin Class to go back to Admin Panel after adding result
+        new Admin();
+    }
+    // public static void main(String[] args) {
+    //     new AddResult();
+    // }
+    private void AddResult() {
         System.out.print("\nEnter Roll Number : ");
         RollNumber = sc.nextInt();
         System.out.print("\nEnter Marks in Programming Fundamentals: ");
@@ -50,10 +58,5 @@ public class AddResult {
             e.printStackTrace();
             System.out.print("\nConnection error");
         }
-        // Calling Admin Class to go back to Admin Panel after adding result
-        new Admin();
     }
-    // public static void main(String[] args) {
-    //     new AddResult();
-    // }
 }

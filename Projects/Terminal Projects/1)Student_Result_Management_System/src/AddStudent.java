@@ -1,21 +1,26 @@
 import java.util.Scanner;
 import java.sql.*;
 public class AddStudent {
-    Scanner sc = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
     // Database Connection
-    String db_Url = "jdbc:mysql://localhost:3306/srm";
-    String db_User = "root";
-    String db_Password = "Affi@786";
+    private String db_Url = "jdbc:mysql://localhost:3306/srm";
+    private String db_User = "root";
+    private String db_Password = "Affi@786";
     // Student Details
-    String program;
-    String semester;
-    String RollNumber;
-    String name;
-    String gender;
-    String fatherName;
+    private String program;
+    private String semester;
+    private String RollNumber;
+    private String name;
+    private String gender;
+    private String fatherName;
 
-    public AddStudent() {
-        // Getting Student Details
+    public AddStudent() {        
+        addStudent();
+        // Call Admin Class to show Admin Menu again after adding student details
+        Admin admin = new Admin();
+    }
+    private void addStudent(){
+        // Getting Student Details to Add in Database
         System.out.print("\nEnter Program : ");
         program = sc.nextLine();
         System.out.print("\nEnter Semester : ");
@@ -27,7 +32,7 @@ public class AddStudent {
         name = sc.nextLine();
         System.out.print("\nEnter Father Name : ");
         fatherName = sc.nextLine();
-        System.out.print("\nEnter your gender: ");
+        System.out.print("\nEnter Gender: ");
         gender = sc.next();
         // Adding Student Details to Database
         try {
@@ -45,8 +50,6 @@ public class AddStudent {
             // System.out.println("Roll Number already exists");
             Admin admin = new Admin();
         }
-        // Call Admin Class to show Admin Menu again after adding student details
-        Admin admin = new Admin();
     }
     // public static void main(String[] args) {
     //     AddStudent addStudent = new AddStudent();

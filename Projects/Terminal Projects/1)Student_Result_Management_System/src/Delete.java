@@ -4,30 +4,32 @@ import java.sql.*;
 public class Delete {
     Scanner sc = new Scanner(System.in);
     // Database Connection
-    String db_Url = "jdbc:mysql://localhost:3306/srm";
-    String db_User = "root";
-    String db_Password = "Affi@786";
+    private String db_Url = "jdbc:mysql://localhost:3306/srm";
+    private String db_User = "root";
+    private String db_Password = "Affi@786";
     // Program Variables
     char choice;
-    String RollNumber;
+    private String RollNumber;
 
     public Delete() {
-        System.out.print("\n\n1. Delete Result\n2. Delete Student and Result\n\nEnter your choice :");
+        System.out.print("\n\nEnter your Selection\n\n\n1. Delete Result\n2. Delete Student and Result\n\nEnter your choice :");
         choice = sc.next().charAt(0);
         sc.nextLine();
         if (choice == '1') {
             DeleteResult();
         } else if (choice == '2') {
             DeleteBoth();
+        }else if (choice == '3') {
+            Admin admin = new Admin();
         } else {
             System.out.println("\nInvalid Choice");
         }
-        // To go back to Admin Panel after deleting record from database 
-        Admin admin = new Admin();
-
+        // To go back to Delete Menu
+        Delete delete = new Delete();
     }
+    
 
-    void DeleteResult() {
+    private void DeleteResult() {
         System.out.print("\nEnter Roll Number : ");
         RollNumber = sc.nextLine();
         try {
@@ -50,7 +52,7 @@ public class Delete {
         }
     }
 
-    void DeleteBoth() {
+    private void DeleteBoth() {
         System.out.print("\nEnter Roll Number : ");
         RollNumber = sc.nextLine();
         try {

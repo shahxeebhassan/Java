@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class Reverse {
     public static void main(String[] args) {
-        long num =23456788990765L;
+        Scanner sc = new Scanner(System.in);
+
+        long num = sc.nextLong();
         long rev = 0;
         while (num != 0) {
             long rem = num % 10;

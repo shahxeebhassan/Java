@@ -100,5 +100,7 @@ public class Hostel {
             e.printStackTrace();
         }
     }
-
+    public static void main(String[] args) {
+        Hostel h = new Hostel();
+    }
 }

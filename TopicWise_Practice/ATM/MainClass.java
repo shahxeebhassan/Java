@@ -45,6 +45,7 @@ public class MainClass {
                 {
                     System.out.println("\nPlease enter correct choice");
                 }
+                break;
             }
         }
         else{

@@ -2,7 +2,7 @@ import java.util.Arrays;
 /**
  * search target and return index key
  */
-public class lisrch {
+public class Lisrch {
 
     public static void main(String[] args) {
         int[] arr = {12,2323,23,2,1,1,2,3,4,5,987};

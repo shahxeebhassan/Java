@@ -1,7 +1,7 @@
-public class mainOverloading {
+public class MainOverloading {
     public static void main(String[] args) {
         System.out.println("Hello, world!");
-        mainOverloading mo = new mainOverloading();
+        MainOverloading mo = new MainOverloading();
         mo.main("Shahzaib");
     }
     public static void main(String name) {

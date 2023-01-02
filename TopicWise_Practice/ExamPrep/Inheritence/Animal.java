@@ -1,4 +1,4 @@
-class inherit {
+class Inherit {
     String name;
     int roll;
     String Sec;
@@ -15,7 +15,7 @@ class inherit {
         System.out.println();
         System.out.println();
     }
-    inherit (String name,int roll,String Sec,double cgpa){
+    Inherit (String name,int roll,String Sec,double cgpa){
         this.name = name;
         this.roll = roll;
         this.Sec = Sec;
@@ -24,13 +24,13 @@ class inherit {
 }
  public class Animal{
     public static void main(String[] args){
-        inherit Saad = new inherit("M Saad", 1043, "M1", 4.8);
+        Inherit Saad = new Inherit("M Saad", 1043, "M1", 4.8);
         Saad.my();
-        inherit Arsal = new inherit("Arsal Bitch", 1017, "M1", 7.8);
+        Inherit Arsal = new Inherit("Arsal Bitch", 1017, "M1", 7.8);
         Arsal.my();
-        inherit Shahzaib = new inherit("Shahzaib", 1005, "M1", 4.8);
+        Inherit Shahzaib = new Inherit("Shahzaib", 1005, "M1", 4.8);
         Shahzaib.my();
-        inherit Sagar = new inherit("M Saad", 1043, "M1", 4.8);
+        Inherit Sagar = new Inherit("M Saad", 1043, "M1", 4.8);
         Sagar.my();
         // System.out.println(Saad.name+Saad.roll+Saad.Sec+Saad.cgpa);
     }

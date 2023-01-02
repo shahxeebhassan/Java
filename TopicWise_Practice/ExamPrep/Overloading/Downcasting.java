@@ -11,7 +11,7 @@ class B extends A {
         System.out.println("B.m2()");
     }
 }
-public class downcasting {
+public class Downcasting {
     public static void main(String[] args) {
         A a = new B();
         a.m1();

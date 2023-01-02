@@ -28,7 +28,7 @@ public class EvenDigits {
     public static int findNo(int[] arr) {
         int count=0;
         for (int i = 0; i < arr.length; i++) {
-            if (isEven(arr[i])==true) {
+            if (isEven(arr[i])) {
                 count++;
             }
         }

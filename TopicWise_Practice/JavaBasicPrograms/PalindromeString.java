@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class PalindromeString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String original,reversed="";
+        String original;
+        String reversed="";
         System.out.print("Enter any String/Number: ");
         original=sc.nextLine();
         int length = original.length();

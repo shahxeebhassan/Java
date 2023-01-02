@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class ReverseString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String original ,reversed="";
+        String original;
+        String reversed="";
         System.out.println("Enter a String/Number");
         original = sc.nextLine();
         int length = original.length();

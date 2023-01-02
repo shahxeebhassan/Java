@@ -1,7 +1,8 @@
 public class PrimeNoMethod {
     static void checkPrime(int num){
         // Scanner sc = new Scanner(System.in);
-        int mid = 0,flag = 0;
+        int mid = 0;
+        int flag = 0;
         // System.out.print("Enter a number to check Prime or not: ");
         // num = sc.nextInt();
         mid = num / 2;

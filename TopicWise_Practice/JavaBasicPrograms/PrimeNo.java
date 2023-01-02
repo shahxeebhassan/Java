@@ -2,7 +2,8 @@ import java.util.Scanner;
 public class PrimeNo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int mid = 0,flag = 0;
+        int mid = 0;
+        int sflag = 0;
         System.out.print("Enter a number to check Prime or not: ");
         int num = sc.nextInt();
         mid = num / 2;

@@ -15,7 +15,8 @@ public class PalindromeNumber {
         System.out.println("Enter a number");
         int num = sc.nextInt();
         int temp = num;
-        int lastDig,reversedNo=0;
+        int lastDig;
+        int sreversedNo=0;
         while (num!= 0) {
             lastDig = num % 10;
             reversedNo = (reversedNo*10)+lastDig;

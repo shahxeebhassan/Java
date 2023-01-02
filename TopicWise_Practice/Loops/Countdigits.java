@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * countdigits
  */
-public class countdigits {
+public class Countdigits {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

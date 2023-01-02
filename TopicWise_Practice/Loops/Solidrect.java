@@ -3,7 +3,7 @@
 import java.util.Scanner;
 
 // Solid Rectangle
-public class solidrect {
+public class Solidrect {
     public static void main(String[] args) {
         //Taking input from user
         System.out.println("Rows of rectangle ?: ");

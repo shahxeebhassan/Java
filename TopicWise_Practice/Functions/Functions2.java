@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 // function to add two numbers and return sum
-public class functions2 {
+public class Functions2 {
     public static int AddTwoNumbers(int num1, int num2) {
         int sum = num1 + num2;
         // System.out.println("Sum of " + num1 + " and " + num2 + " is " + sum);

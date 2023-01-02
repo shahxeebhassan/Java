@@ -1,6 +1,6 @@
 // package class10;
 import java.util.*;
-public class array2 {
+public class Array2 {
     public static void main(String[] args) {
         int [] marks_1st = new int [6];
         int sum = 0;

@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * 01_conditional
  */
-public class conditional1 {
+public class Conditional1 {
 
     public static void main(String[] args) {
         System.out.println("Enter your age");

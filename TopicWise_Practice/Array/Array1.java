@@ -1,6 +1,6 @@
 // package class10;
 
-public class array1 {
+public class Array1 {
     public static void main(String[] args) {
         int [] marks = new int [6];
         marks[0] = 97;

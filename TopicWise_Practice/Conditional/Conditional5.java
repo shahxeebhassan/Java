@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 
-public class conditional5 {
+public class Conditional5 {
     public static void main(String[] args) {
         System.out.println("Enter value 1");
         Scanner sc = new Scanner(System.in);

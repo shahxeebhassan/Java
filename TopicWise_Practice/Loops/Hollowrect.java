@@ -1,7 +1,7 @@
 // package class5;
 import java.util.Scanner;
 
-public class hollowrect {
+public class Hollowrect {
     //Write a program that will draw a hollow rectangle.
     public static void main(String[] args) {
         System.out.println("Enter the width of the rectangle: ");

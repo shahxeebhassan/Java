@@ -1,7 +1,7 @@
 // package class5;
 import java.util.Scanner;
 
-public class zeroonetri {
+public class Zeroonetri {
     public static void main(String[] args) {
         // 0-1 triangle
         System.out.println("Enter the number of rows: ");

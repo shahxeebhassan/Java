@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class conditional2{
+public class Conditional2{
     public static void main(String[] args) {
         System.out.println("Enter number 1");
         Scanner sc = new Scanner(System.in);

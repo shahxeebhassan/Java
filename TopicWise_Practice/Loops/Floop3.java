@@ -1,7 +1,7 @@
 // package class4;
 import java.util.Scanner;
 
-public class floop3 {
+public class Floop3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a number: ");

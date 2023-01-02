@@ -1,7 +1,7 @@
 // package class7;
 import java.util.Scanner;
 
-public class functions1 {
+public class Functions1 {
     public static void PrintMyName(String name) {
         System.out.println("My name is " + name);
         return;

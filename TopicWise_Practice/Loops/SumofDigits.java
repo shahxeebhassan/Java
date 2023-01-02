@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * countdigits
  */
-public class sumofDigits {
+public class SumofDigits {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

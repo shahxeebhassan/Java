@@ -1,7 +1,7 @@
 // package class3;
 import java.util.Scanner;
 
-public class conditional3{
+public class Conditional3{
     public static void main(String[] args) {
         System.out.println("Enter a number");
         Scanner sc = new Scanner(System.in);

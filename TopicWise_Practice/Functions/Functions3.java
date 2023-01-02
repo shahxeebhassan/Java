@@ -3,7 +3,7 @@
 import java.util.Scanner;
 
 // function to multiply two numbers and return product
-public class functions3 {
+public class Functions3 {
     public static int calculateProduct(int num1, int num2) {
         return num1 * num2;
         // return product;

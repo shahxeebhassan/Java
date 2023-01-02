@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class halfpyramidwithnumbers {
+public class Halfpyramidwithnumbers {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of rows: ");

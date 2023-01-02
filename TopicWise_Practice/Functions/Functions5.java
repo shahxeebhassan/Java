@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * functions5
  */
-public class functions5 {
+public class Functions5 {
 
     public static void PrimeNumber(int n) {
         int i;

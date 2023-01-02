@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class invhalfpyramid180deg {
+public class Invhalfpyramid180deg {
     public static void main(String[] args) {
         // inverted half pyramid with 180 degrees
         System.out.println("Enter the number of rows: ");

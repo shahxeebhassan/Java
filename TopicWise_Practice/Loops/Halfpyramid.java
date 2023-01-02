@@ -1,7 +1,7 @@
 // package class5;
 import java.util.Scanner;
 
-public class halfpyramid {
+public class Halfpyramid {
 
     public static void main(String[] args) {
         

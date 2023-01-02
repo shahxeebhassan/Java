@@ -2,7 +2,7 @@
 import java.util.*;
 // factorial of a number
 
-public class functions4 {
+public class Functions4 {
     public static void Factorial(int num){
         if (num < 0) {
             System.out.println("Invalid Number");

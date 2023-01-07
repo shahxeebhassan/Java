@@ -1,0 +1,2 @@
+Type Conversion is also called implicit or widening conversion.
+Type Conversion is also called explicit or narrowing conversion.

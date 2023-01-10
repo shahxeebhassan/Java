@@ -59,8 +59,6 @@ public class AddResult {
             System.out.print("\nConnection error");
         }
     }
-    public static void main(String[] args) {
-        new AddResult();
-        
+    public static void main(String[] args) {       
     }
 }
